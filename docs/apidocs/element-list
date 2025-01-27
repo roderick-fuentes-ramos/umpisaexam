@@ -1,0 +1,9 @@
+com.rfr.umpisaexam
+com.rfr.umpisaexam.controller
+com.rfr.umpisaexam.dto
+com.rfr.umpisaexam.entity
+com.rfr.umpisaexam.exception
+com.rfr.umpisaexam.repository
+com.rfr.umpisaexam.service
+com.rfr.umpisaexam.service.impl
+com.rfr.umpisaexam.util
