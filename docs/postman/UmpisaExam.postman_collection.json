@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "cb5945c0-1d00-4c34-8b89-a3344f1da910",
+		"name": "UmpisaExam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34255989"
+	},
+	"item": [
+		{
+			"name": "create reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Roderick Ramos\",\r\n    \"phoneNumber\": \"09566118545\",\r\n    \"email\": \"ramos_roderick@yahoo.com\",\r\n    \"methodOfCommunication\": \"SMS\",\r\n    \"reservationDateTime\": \"2025-01-25 03:00:00\",\r\n    \"numberOfGuests\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/reservation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view reservation by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/reservation/Roderick Ramos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"reservation",
+						"Roderick Ramos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update reservation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Roderick Ramos\",\r\n    \"phoneNumber\": \"09566118545\",\r\n    \"email\": \"ramos_roderick@yahoo.com\",\r\n    \"methodOfCommunication\": \"SMS\",\r\n    \"reservationDateTime\": \"2025-01-25 05:00:00\",\r\n    \"numberOfGuests\": 9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/reservation/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"reservation",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel reservation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/reservation/cancel/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"reservation",
+						"cancel",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view all reservations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/reservation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
